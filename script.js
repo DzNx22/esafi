@@ -14,6 +14,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  let lastScrollY = window.scrollY;
+  if (header) {
+    window.addEventListener('scroll', () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY && currentScrollY > header.offsetHeight) {
+        header.classList.add('header-hidden');
+        header.classList.remove('nav-open');
+      } else {
+        header.classList.remove('header-hidden');
+      }
+      lastScrollY = currentScrollY;
+    }, { passive: true });
+  }
+
   const revealEls = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver((entries) => {
