@@ -551,13 +551,6 @@ section + section {
   color: var(--ink);
   padding: var(--space-3) var(--space-4) var(--space-3) 0;
 }
-.schedule-row--muted {
-  opacity: 0.6;
-}
-.schedule-row--muted .schedule-time,
-.schedule-row--muted .schedule-activity {
-  font-size: 14px;
-}
 .schedule-row--talk {
   position: relative;
   border-left: 3px solid var(--gold);
