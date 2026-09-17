@@ -218,7 +218,12 @@ img { max-width: 100%; display: block; }
 .btn-grid .btn {
   width: 100%;
   min-width: 0;
+  min-height: 76px;
   white-space: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 .btn-stack {
   display: flex;
