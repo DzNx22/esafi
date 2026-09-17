@@ -774,13 +774,16 @@ section { padding: var(--space-7) 0; position: relative; overflow: hidden; }
   .hero-title-word { font-size: 64px; }
   .hero-title-sub { font-size: 26px; }
   .pinwheel { width: 130px; height: auto; }
+  .hero { display: flex; flex-direction: column; }
+  .hero .container { order: 1; }
   .hero-top { grid-template-columns: 1fr; min-height: 0; }
   .hero-speakers {
+    order: 2;
     position: static;
     width: 100%;
     max-width: 480px;
     height: auto;
-    margin-top: var(--space-6);
+    margin: var(--space-6) auto 0;
     display: block;
   }
 }
