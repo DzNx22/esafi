@@ -109,17 +109,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     phoneInput.addEventListener('input', () => {
-      let digits = phoneInput.value.replace(/\D/g, '').slice(0, 11);
-      let formatted = digits;
-      if (digits.length > 0) formatted = '(' + digits.slice(0, 2);
-      if (digits.length >= 3) formatted += ') ' + digits.slice(2, 7);
-      if (digits.length >= 8) formatted += '-' + digits.slice(7, 11);
+      const digits = phoneInput.value.replace(/\D/g, '').slice(0, 11);
+      const ddd = digits.slice(0, 2);
+      const local = digits.slice(2);
+      const splitAt = local.length > 8 ? 5 : 4;
+      let formatted = digits.length > 0 ? '(' + ddd : '';
+      if (digits.length >= 3) formatted += ') ' + local.slice(0, splitAt);
+      if (local.length > splitAt) formatted += '-' + local.slice(splitAt, splitAt + 4);
       phoneInput.value = formatted;
       setError(phoneInput, '');
     });
 
     const isValidEmail = (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
-    const isValidPhone = (value) => /^\(\d{2}\) \d{5}-\d{4}$/.test(value);
+    const isValidPhone = (value) => /^\(\d{2}\) \d{4,5}-\d{4}$/.test(value);
 
     form.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -133,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       if (!isValidPhone(phoneInput.value)) {
-        setError(phoneInput, 'Telefone inválido. Use o formato (00) 00000-0000.');
+        setError(phoneInput, 'WhatsApp inválido. Use (00) 0000-0000 ou (00) 00000-0000.');
         valid = false;
       } else {
         setError(phoneInput, '');
