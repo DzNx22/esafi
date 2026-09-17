@@ -28,6 +28,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: true });
   }
 
+  const scrollTopBtn = document.getElementById('scroll-top');
+  if (scrollTopBtn) {
+    scrollTopBtn.hidden = false;
+    window.addEventListener('scroll', () => {
+      scrollTopBtn.classList.toggle('is-visible', window.scrollY > 600);
+    }, { passive: true });
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
   document.querySelectorAll('[data-accordion]').forEach((item) => {
     const trigger = item.querySelector('.schedule-head, .faq-head');
     if (!trigger) return;

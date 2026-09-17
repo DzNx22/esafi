@@ -102,42 +102,42 @@
       <div class="speaker-grid">
         <div class="speaker-card speaker-card--gold reveal">
           <div class="speaker-photo">
-            <img src="assets/images/speakers/andre-baeta.webp" alt="André Baeta">
+            <img src="assets/images/speakers/andre-baeta.webp" loading="lazy" alt="André Baeta">
             <h3 class="heading-card">André Baeta</h3>
           </div>
           <div class="speaker-badge label-badge">Auditor Federal de Controle Interno do TCU</div>
         </div>
         <div class="speaker-card speaker-card--blue reveal">
           <div class="speaker-photo">
-            <img src="assets/images/speakers/andre-kuhn.webp" alt="André Kuhn">
+            <img src="assets/images/speakers/andre-kuhn.webp" loading="lazy" alt="André Kuhn">
             <h3 class="heading-card">André Kuhn</h3>
           </div>
           <div class="speaker-badge label-badge">Secretário de Engenharia e Arquitetura do MPF</div>
         </div>
         <div class="speaker-card speaker-card--gold reveal">
           <div class="speaker-photo">
-            <img src="assets/images/speakers/hamilton-bonatto.webp" alt="Hamilton Bonatto">
+            <img src="assets/images/speakers/hamilton-bonatto.webp" loading="lazy" alt="Hamilton Bonatto">
             <h3 class="heading-card">Hamilton Bonatto</h3>
           </div>
           <div class="speaker-badge label-badge">Procurador do Estado do Paraná</div>
         </div>
         <div class="speaker-card speaker-card--blue reveal">
           <div class="speaker-photo">
-            <img src="assets/images/speakers/marcio-medeiros.webp" alt="Marcio Medeiros">
+            <img src="assets/images/speakers/marcio-medeiros.webp" loading="lazy" alt="Marcio Medeiros">
             <h3 class="heading-card">Marcio Medeiros</h3>
           </div>
           <div class="speaker-badge label-badge">Diretor de Administração e Finanças do Metrô</div>
         </div>
         <div class="speaker-card speaker-card--gold reveal">
           <div class="speaker-photo">
-            <img src="assets/images/speakers/tatiana-camarao.webp" alt="Tatiana Camarão">
+            <img src="assets/images/speakers/tatiana-camarao.webp" loading="lazy" alt="Tatiana Camarão">
             <h3 class="heading-card">Tatiana Camarão</h3>
           </div>
           <div class="speaker-badge label-badge">Diretora de Gestão e Relações Institucionais na Metis 5</div>
         </div>
         <div class="speaker-card speaker-card--blue reveal">
           <div class="speaker-photo">
-            <img src="assets/images/speakers/washigton-luke.webp" alt="Washigton Luke">
+            <img src="assets/images/speakers/washigton-luke.webp" loading="lazy" alt="Washigton Luke">
             <h3 class="heading-card">Washigton Luke</h3>
           </div>
           <div class="speaker-badge label-badge">Diretor Jurídico da Master International em BIM Management do Zigurat</div>
@@ -233,7 +233,7 @@
       </div>
       <div class="location-block reveal">
         <div class="location-card">
-          <div class="location-photo"><img src="assets/images/hotel-verde-green.jpg" alt="Fachada do Hotel Verde Green ao entardecer"></div>
+          <div class="location-photo"><img src="assets/images/hotel-verde-green.jpg" loading="lazy" alt="Fachada do Hotel Verde Green ao entardecer"></div>
           <div class="location-caption">
             <h3 class="location-name heading-section">Hotel Verde Green</h3>
             <div class="location-city label-nav">João Pessoa - PB</div>
@@ -253,7 +253,7 @@
             </li>
           </ul>
           <div class="btn-row">
-            <a href="#" class="btn btn-secondary label-nav">VISITAR SITE DO HOTEL</a>
+            <a href="https://www.verdegreen.com.br/" target="_blank" rel="noopener" class="btn btn-secondary label-nav">VISITAR SITE DO HOTEL</a>
           </div>
         </div>
       </div>
@@ -343,6 +343,10 @@
 
 </main>
 
+<button type="button" class="scroll-top" id="scroll-top" aria-label="Voltar ao topo" hidden>
+  <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"></polyline></svg>
+</button>
+
 <footer class="site-footer">
   <div class="container footer-inner">
     <a href="#topo" class="logo"><img class="logo-full" src="assets/marks/esafi-logo.png" alt="ESAFI"></a>
@@ -360,20 +364,21 @@
     <p class="body-text modal-desc">Preencha seus dados e nossa equipe entrará em contato com todos os detalhes da Semana Nacional de Obras Públicas.</p>
     <form id="info-modal-form" novalidate>
       <div class="form-field">
-        <label for="info-name" class="label-badge">Nome</label>
+        <label for="info-name" class="label-badge">Nome <span class="required-mark" aria-hidden="true">*</span></label>
         <input type="text" id="info-name" name="name" required autocomplete="name" placeholder="Seu nome completo">
         <span class="form-error" data-error-for="info-name"></span>
       </div>
       <div class="form-field">
-        <label for="info-phone" class="label-badge">WhatsApp</label>
+        <label for="info-phone" class="label-badge">WhatsApp <span class="required-mark" aria-hidden="true">*</span></label>
         <input type="tel" id="info-phone" name="phone" required inputmode="numeric" autocomplete="tel" placeholder="(00) 00000-0000" maxlength="15">
         <span class="form-error" data-error-for="info-phone"></span>
       </div>
       <div class="form-field">
-        <label for="info-email" class="label-badge">E-mail</label>
+        <label for="info-email" class="label-badge">E-mail <span class="required-mark" aria-hidden="true">*</span></label>
         <input type="email" id="info-email" name="email" required autocomplete="email" placeholder="seu@email.com">
         <span class="form-error" data-error-for="info-email"></span>
       </div>
+      <p class="modal-required-note">* Campos obrigatórios</p>
       <div class="modal-success" id="info-modal-success" hidden>Recebemos seus dados! Em breve entraremos em contato.</div>
       <div class="btn-row modal-actions">
         <button type="submit" class="btn btn-primary label-nav">ENVIAR</button>
