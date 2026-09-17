@@ -56,8 +56,9 @@ img { max-width: 100%; display: block; }
 .hero-title-row {
   display: flex;
   align-items: flex-end;
-  gap: var(--space-2);
+  gap: 0;
 }
+.pinwheel { margin-left: -12px; }
 .hero-title-word {
   font-family: "Museo", var(--font-sans);
   font-size: 80px;
