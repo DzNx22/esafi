@@ -483,7 +483,9 @@ section { padding: var(--space-7) 0; position: relative; overflow: hidden; }
 .speaker-photo {
   position: relative;
   height: 190px;
+  border-radius: 40px 90px 0 0;
   overflow: visible;
+  clip-path: inset(-9999px 0 0 0 round 40px 90px 0 0);
   display: flex;
   align-items: flex-end;
 }
@@ -497,8 +499,6 @@ section { padding: var(--space-7) 0; position: relative; overflow: hidden; }
   height: 248px;
   transform: translateX(-50%);
   z-index: 0;
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.5) 10%, black 24%);
-  mask-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.5) 10%, black 24%);
 }
 .speaker-photo::after {
   content: "";
@@ -513,7 +513,7 @@ section { padding: var(--space-7) 0; position: relative; overflow: hidden; }
   margin: 0 0 var(--space-3) var(--space-4);
 }
 .speaker-badge {
-  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 18px), calc(100% - 18px) 100%, 18px 100%, 0 calc(100% - 18px));
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
   padding: var(--space-4);
   text-align: center;
   height: 92px;
