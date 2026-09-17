@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   document.querySelectorAll('[data-accordion]').forEach((item) => {
-    const trigger = item.querySelector('.schedule-head');
+    const trigger = item.querySelector('.schedule-head, .faq-head');
     if (!trigger) return;
     trigger.addEventListener('click', () => {
       const isOpen = item.classList.toggle('is-open');
