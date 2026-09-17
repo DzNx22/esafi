@@ -652,7 +652,7 @@ section { padding: var(--space-7) 0; position: relative; overflow: hidden; }
 .location-photo:hover img { transform: scale(1.06); }
 .location-caption { margin-top: var(--space-4); }
 .location-name { color: var(--gold); margin: 0; font-size: 26px; }
-.location-city { color: var(--gold); margin: var(--space-2) 0 0; opacity: 0.9; }
+.location-city { font-family: "Museo", var(--font-sans); font-weight: 300; color: var(--gold); margin: var(--space-2) 0 0; opacity: 0.9; }
 
 .location-info { display: flex; flex-direction: column; }
 .location-info .body-text { margin: 0 0 var(--space-3); }
