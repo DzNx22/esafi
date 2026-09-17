@@ -310,7 +310,8 @@ img { max-width: 100%; display: block; }
   margin-top: var(--space-7);
   background: linear-gradient(180deg, #bfe3f7, #cdeecb 60%, #a8d79f);
   border-radius: var(--radius-none);
-  height: 380px;
+  aspect-ratio: 16 / 9;
+  height: auto;
   position: relative;
   overflow: hidden;
 }
@@ -598,7 +599,7 @@ section { padding: var(--space-7) 0; position: relative; }
   .hero-title-sub { font-size: 20px; }
   .pinwheel { width: 90px; height: auto; }
   .hero-photos img { height: 120px; }
-  .hero-video { height: 220px; }
+  .hero-video { aspect-ratio: 16 / 9; height: auto; }
   .hero-speakers { max-width: 100%; }
   .footer-inner { flex-direction: column; }
 }
