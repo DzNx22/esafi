@@ -467,13 +467,14 @@ section { padding: var(--space-7) 0; position: relative; overflow: hidden; }
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-4);
-  row-gap: var(--space-6);
+  row-gap: 76px;
   max-width: 760px;
   margin: 0 auto;
 }
 .speaker-card {
   width: 100%;
   overflow: visible;
+  margin-top: 48px;
   position: relative;
   z-index: 0;
   transition: transform 0.4s ease;
@@ -483,16 +484,19 @@ section { padding: var(--space-7) 0; position: relative; overflow: hidden; }
 }
 .speaker-photo {
   position: relative;
+  height: 190px;
   border-radius: 40px 90px 0 0;
-  overflow: hidden;
+  overflow: visible;
   display: flex;
   align-items: flex-end;
 }
 .speaker-photo img {
   display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
   width: 100%;
   height: auto;
-  position: relative;
   z-index: 0;
 }
 .speaker-photo::after {
@@ -511,7 +515,7 @@ section { padding: var(--space-7) 0; position: relative; overflow: hidden; }
   border-radius: 0 0 var(--radius-lg) var(--radius-lg);
   padding: var(--space-4);
   text-align: center;
-  min-height: 64px;
+  height: 92px;
   display: flex;
   align-items: center;
   justify-content: center;
