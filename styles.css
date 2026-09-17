@@ -362,97 +362,11 @@ img { max-width: 100%; display: block; }
   flex-shrink: 0;
 }
 
-section { padding: var(--space-7) 0; position: relative; overflow: hidden; }
+section { padding: var(--space-7) 0; position: relative; }
 #palestrantes { padding-top: var(--space-5); }
 #apresentacao { padding-top: var(--space-2); }
 #palestrantes .section-heading { margin-bottom: var(--space-5); }
-
-/* Decorative corner triangles per section (45°/90° only, per brand system) */
-#apresentacao::before {
-  content: "";
-  position: absolute;
-  top: -70px;
-  left: -70px;
-  width: 220px;
-  height: 220px;
-  background: var(--surface-raised);
-  opacity: 0.35;
-  clip-path: polygon(0 0, 100% 0, 0 100%);
-  z-index: 0;
-}
-#apresentacao::after {
-  content: "";
-  position: absolute;
-  bottom: -90px;
-  right: -90px;
-  width: 260px;
-  height: 260px;
-  background: var(--gold);
-  opacity: 0.08;
-  clip-path: polygon(100% 100%, 0 100%, 100% 0);
-  z-index: 0;
-}
-#palestrantes::before {
-  content: "";
-  position: absolute;
-  top: -60px;
-  right: -60px;
-  width: 200px;
-  height: 200px;
-  background: var(--gold);
-  opacity: 0.1;
-  clip-path: polygon(100% 0, 100% 100%, 0 0);
-  z-index: 0;
-}
-#programacao::before {
-  content: "";
-  position: absolute;
-  bottom: -80px;
-  left: -80px;
-  width: 240px;
-  height: 240px;
-  background: var(--surface-raised);
-  opacity: 0.4;
-  clip-path: polygon(0 100%, 100% 100%, 0 0);
-  z-index: 0;
-}
-#local::before {
-  content: "";
-  position: absolute;
-  top: -50px;
-  right: 10%;
-  width: 140px;
-  height: 140px;
-  background: var(--gold);
-  opacity: 0.09;
-  clip-path: polygon(0 0, 100% 0, 100% 100%);
-  z-index: 0;
-}
-#faq::before {
-  content: "";
-  position: absolute;
-  bottom: -70px;
-  right: -70px;
-  width: 200px;
-  height: 200px;
-  background: var(--surface-raised);
-  opacity: 0.35;
-  clip-path: polygon(100% 100%, 0 100%, 100% 0);
-  z-index: 0;
-}
-.site-footer { position: relative; overflow: hidden; }
-.site-footer::before {
-  content: "";
-  position: absolute;
-  top: -50px;
-  left: -50px;
-  width: 160px;
-  height: 160px;
-  background: var(--gold);
-  opacity: 0.06;
-  clip-path: polygon(0 0, 100% 0, 0 100%);
-  z-index: 0;
-}
+.site-footer { position: relative; }
 
 /* Apresentação / Público-Alvo */
 .two-col {
