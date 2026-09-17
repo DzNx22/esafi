@@ -28,6 +28,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: true });
   }
 
+  document.querySelectorAll('[data-accordion]').forEach((item) => {
+    const trigger = item.querySelector('.schedule-head');
+    if (!trigger) return;
+    trigger.addEventListener('click', () => {
+      const isOpen = item.classList.toggle('is-open');
+      trigger.setAttribute('aria-expanded', String(isOpen));
+    });
+  });
+
   const revealEls = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver((entries) => {

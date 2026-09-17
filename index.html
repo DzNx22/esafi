@@ -155,15 +155,15 @@
       </div>
 
       <div class="schedule-list">
-        <details class="schedule-day reveal" open>
-          <summary class="schedule-head">
+        <div class="schedule-day reveal is-open" data-accordion>
+          <button type="button" class="schedule-head" aria-expanded="true">
             <span class="schedule-head-text">
               <span class="schedule-head-title label-badge">1º DIA</span>
               <span class="schedule-head-date label-badge">04 DE NOVEMBRO DE 2026 · QUARTA-FEIRA</span>
             </span>
             <span class="schedule-chevron" aria-hidden="true">⌄</span>
-          </summary>
-          <div class="schedule-body">
+          </button>
+          <div class="schedule-body-wrap"><div class="schedule-body">
             <div class="schedule-row"><div class="schedule-time label-badge">7H30</div><div class="schedule-activity body-text">Início do credenciamento dos participantes</div></div>
             <div class="schedule-row"><div class="schedule-time label-badge">8H30</div><div class="schedule-activity body-text">Abertura oficial e informações iniciais</div></div>
             <div class="schedule-row"><div class="schedule-time label-badge">9H</div><div class="schedule-activity body-text">André Baeta: Orçamentação, BDI e Reforma Tributária nas Obras Públicas como prevenir sobrepreço e superfaturamento com compromisso e execução fiscal contratual</div></div>
@@ -172,17 +172,18 @@
             <div class="schedule-row"><div class="schedule-time label-badge">16H45</div><div class="schedule-activity body-text">Espaço para questionamentos</div></div>
             <div class="schedule-row"><div class="schedule-time label-badge">17H15</div><div class="schedule-activity body-text">Encerramento do dia</div></div>
           </div>
-        </details>
+          </div>
+        </div>
 
-        <details class="schedule-day reveal">
-          <summary class="schedule-head">
+        <div class="schedule-day reveal" data-accordion>
+          <button type="button" class="schedule-head" aria-expanded="false">
             <span class="schedule-head-text">
               <span class="schedule-head-title label-badge">2º DIA</span>
               <span class="schedule-head-date label-badge">05 DE NOVEMBRO DE 2026 · QUINTA-FEIRA</span>
             </span>
             <span class="schedule-chevron" aria-hidden="true">⌄</span>
-          </summary>
-          <div class="schedule-body">
+          </button>
+          <div class="schedule-body-wrap"><div class="schedule-body">
             <div class="schedule-row"><div class="schedule-time label-badge">8H30</div><div class="schedule-activity body-text">Abertura dos trabalhos do dia e informações iniciais</div></div>
             <div class="schedule-row"><div class="schedule-time label-badge">9H</div><div class="schedule-activity body-text">Washigton Luke: Utilização do BIM e o Novo contratações de obras e serviços de engenharia - as ferramentas informatizadas não substituem o profissional</div></div>
             <div class="schedule-row"><div class="schedule-time label-badge">12H30</div><div class="schedule-activity body-text">Almoço</div></div>
@@ -190,17 +191,18 @@
             <div class="schedule-row"><div class="schedule-time label-badge">16H45</div><div class="schedule-activity body-text">Espaço para questionamentos</div></div>
             <div class="schedule-row"><div class="schedule-time label-badge">17H15</div><div class="schedule-activity body-text">Encerramento do dia</div></div>
           </div>
-        </details>
+          </div>
+        </div>
 
-        <details class="schedule-day reveal">
-          <summary class="schedule-head">
+        <div class="schedule-day reveal" data-accordion>
+          <button type="button" class="schedule-head" aria-expanded="false">
             <span class="schedule-head-text">
               <span class="schedule-head-title label-badge">3º DIA</span>
               <span class="schedule-head-date label-badge">06 DE NOVEMBRO DE 2026 · QUINTA-FEIRA</span>
             </span>
             <span class="schedule-chevron" aria-hidden="true">⌄</span>
-          </summary>
-          <div class="schedule-body">
+          </button>
+          <div class="schedule-body-wrap"><div class="schedule-body">
             <div class="schedule-row"><div class="schedule-time label-badge">8H30</div><div class="schedule-activity body-text">Abertura dos trabalhos do dia e informações iniciais</div></div>
             <div class="schedule-row"><div class="schedule-time label-badge">9H</div><div class="schedule-activity body-text">André Kuhn: Fiscalização de contratos de obras - inovações da legislação vigente que devem, ao mesmo tempo, preocupar-se com a especialização do gestor</div></div>
             <div class="schedule-row"><div class="schedule-time label-badge">12H30</div><div class="schedule-activity body-text">Almoço</div></div>
@@ -208,7 +210,8 @@
             <div class="schedule-row"><div class="schedule-time label-badge">16H45</div><div class="schedule-activity body-text">Espaço para questionamentos</div></div>
             <div class="schedule-row"><div class="schedule-time label-badge">17H15</div><div class="schedule-activity body-text">Encerramento do evento e entrega de certificados</div></div>
           </div>
-        </details>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -244,19 +247,19 @@
       </div>
       <div class="faq-list reveal">
         <details class="faq-item">
-          <summary class="label-badge">Como faço minha inscrição? <span>+</span></summary>
+          <summary class="label-badge">Como faço minha inscrição? <span>+</span></button>
           <p>Clique em "QUERO ME INSCREVER" e preencha o formulário com seus dados. Após a confirmação do pagamento, você receberá um e-mail com as instruções de acesso ao evento.</p>
         </details>
         <details class="faq-item">
-          <summary class="label-badge">O evento emite certificado? <span>+</span></summary>
+          <summary class="label-badge">O evento emite certificado? <span>+</span></button>
           <p>Sim. Os certificados serão entregues no encerramento do terceiro dia, mediante a comprovação de frequência mínima de 75% da carga horária.</p>
         </details>
         <details class="faq-item">
-          <summary class="label-badge">A hospedagem está inclusa na inscrição? <span>+</span></summary>
+          <summary class="label-badge">A hospedagem está inclusa na inscrição? <span>+</span></button>
           <p>Não. A hospedagem deve ser reservada diretamente com o Hotel Verde Green, local do evento, sujeita a disponibilidade e valores próprios.</p>
         </details>
         <details class="faq-item">
-          <summary class="label-badge">Posso parcelar o pagamento da inscrição? <span>+</span></summary>
+          <summary class="label-badge">Posso parcelar o pagamento da inscrição? <span>+</span></button>
           <p>Sim, o parcelamento está disponível conforme as condições apresentadas no momento da inscrição.</p>
         </details>
       </div>

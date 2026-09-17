@@ -350,11 +350,13 @@ section { padding: var(--space-7) 0; position: relative; }
   background: var(--surface-raised);
   box-shadow: 0 16px 40px -12px rgba(4, 23, 68, 0.55);
   overflow: hidden;
+  transition: box-shadow 0.35s ease;
 }
-.schedule-day[open] {
+.schedule-day.is-open {
   box-shadow: 0 20px 48px -10px rgba(4, 23, 68, 0.65);
 }
 .schedule-head {
+  width: 100%;
   background: var(--gold);
   color: var(--ink-on-gold);
   padding: var(--space-4);
@@ -362,17 +364,10 @@ section { padding: var(--space-7) 0; position: relative; }
   align-items: center;
   gap: var(--space-4);
   cursor: pointer;
-  list-style: none;
   user-select: none;
-}
-.schedule-head::-webkit-details-marker { display: none; }
-.schedule-head-icon {
-  font-family: "Museo", var(--font-sans);
-  font-size: 30px;
-  font-weight: 300;
-  line-height: 1;
-  flex-shrink: 0;
-  opacity: 0.55;
+  border: 0;
+  font-family: inherit;
+  text-align: left;
 }
 .schedule-head-text {
   display: flex;
@@ -385,14 +380,24 @@ section { padding: var(--space-7) 0; position: relative; }
 .schedule-chevron {
   font-size: 22px;
   line-height: 1;
-  transition: transform 0.25s ease;
+  transition: transform 0.4s cubic-bezier(0.65, 0, 0.35, 1);
   flex-shrink: 0;
 }
-.schedule-day[open] .schedule-chevron { transform: rotate(180deg); }
+.schedule-day.is-open .schedule-chevron { transform: rotate(180deg); }
 
+.schedule-body-wrap {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.45s cubic-bezier(0.65, 0, 0.35, 1);
+}
+.schedule-day.is-open .schedule-body-wrap {
+  grid-template-rows: 1fr;
+}
 .schedule-body {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+  min-height: 0;
 }
 .schedule-row {
   display: flex;
