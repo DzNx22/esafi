@@ -542,8 +542,7 @@ section { padding: var(--space-7) 0; position: relative; }
   position: relative;
   border-left: 3px solid var(--gold);
 }
-.schedule-row--talk .schedule-time,
-.schedule-row--talk .schedule-activity {
+.schedule-row--talk .schedule-time {
   padding-left: calc(var(--space-4) - 3px);
 }
 .speaker-name-highlight {
