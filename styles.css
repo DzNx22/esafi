@@ -513,7 +513,7 @@ section { padding: var(--space-7) 0; position: relative; overflow: hidden; }
   margin: 0 0 var(--space-3) var(--space-4);
 }
 .speaker-badge {
-  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 18px), calc(100% - 18px) 100%, 18px 100%, 0 calc(100% - 18px));
   padding: var(--space-4);
   text-align: center;
   height: 92px;
