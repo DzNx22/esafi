@@ -497,6 +497,8 @@ section { padding: var(--space-7) 0; position: relative; overflow: hidden; }
   height: 248px;
   transform: translateX(-50%);
   z-index: 0;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.5) 10%, black 24%);
+  mask-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.5) 10%, black 24%);
 }
 .speaker-photo::after {
   content: "";
