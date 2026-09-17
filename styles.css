@@ -112,10 +112,9 @@ img { max-width: 100%; display: block; }
   font-size: 20px;
 }
 .logo-mark {
-  width: 30px;
-  height: 30px;
-  background: var(--gold);
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  width: 34px;
+  height: auto;
+  display: block;
 }
 .main-nav ul {
   list-style: none;
