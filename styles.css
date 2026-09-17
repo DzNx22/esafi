@@ -497,6 +497,7 @@ section { padding: var(--space-7) 0; position: relative; overflow: hidden; }
   left: 50%;
   bottom: 0;
   width: auto;
+  max-width: none;
   height: 248px;
   transform: translateX(-50%);
   z-index: 0;
