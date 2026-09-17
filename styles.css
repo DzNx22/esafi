@@ -127,8 +127,14 @@ img { max-width: 100%; display: block; }
 .main-nav a {
   color: var(--ink);
   text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  transition: color 0.25s ease, font-weight 0.25s ease;
 }
-.main-nav a:hover { color: var(--gold); }
+.main-nav a:hover {
+  color: var(--gold);
+  font-weight: 700;
+}
 .nav-toggle {
   display: none;
   background: none;
