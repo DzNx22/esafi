@@ -468,8 +468,6 @@ section { padding: var(--space-7) 0; position: relative; overflow: hidden; }
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-4);
   row-gap: 76px;
-  max-width: 760px;
-  margin: 0 auto;
 }
 .speaker-card {
   width: 100%;
