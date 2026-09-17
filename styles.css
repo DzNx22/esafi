@@ -473,7 +473,7 @@ section { padding: var(--space-7) 0; position: relative; overflow: hidden; }
 .speaker-card {
   width: 100%;
   overflow: visible;
-  margin-top: 48px;
+  margin-top: 70px;
   position: relative;
   z-index: 0;
   transition: transform 0.4s ease;
