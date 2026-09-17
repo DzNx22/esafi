@@ -521,6 +521,7 @@ section { padding: var(--space-7) 0; position: relative; overflow: hidden; }
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 14px;
 }
 .speaker-card--gold .speaker-photo { background: var(--surface-raised); }
 .speaker-card--gold .speaker-badge { background: var(--gold); color: var(--ink-on-gold); }
