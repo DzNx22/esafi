@@ -194,8 +194,8 @@ img { max-width: 100%; display: block; }
 .hero-speakers {
   position: absolute;
   top: var(--space-8);
-  right: 2%;
-  width: 50%;
+  right: 5%;
+  width: 48%;
   height: auto;
   max-height: 520px;
   object-fit: contain;
