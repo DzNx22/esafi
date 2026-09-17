@@ -364,7 +364,7 @@ img { max-width: 100%; display: block; }
 
 section { padding: var(--space-7) 0; position: relative; overflow: hidden; }
 #palestrantes { padding-top: var(--space-5); }
-#apresentacao { padding-top: var(--space-5); }
+#apresentacao { padding-top: var(--space-2); }
 #palestrantes .section-heading { margin-bottom: var(--space-5); }
 
 /* Decorative corner triangles per section (45°/90° only, per brand system) */
