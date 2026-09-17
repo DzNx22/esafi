@@ -339,23 +339,69 @@ section { padding: var(--space-7) 0; position: relative; }
 }
 
 /* Programação */
+.schedule-list {
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
 .schedule-day {
-  max-width: 720px;
-  margin: 0 auto var(--space-5);
+  background: var(--surface-raised);
+  box-shadow: 0 16px 40px -12px rgba(4, 23, 68, 0.55);
+  overflow: hidden;
+}
+.schedule-day[open] {
+  box-shadow: 0 20px 48px -10px rgba(4, 23, 68, 0.65);
 }
 .schedule-head {
   background: var(--gold);
   color: var(--ink-on-gold);
-  text-align: center;
-  padding: var(--space-3);
-  border-radius: var(--radius-none);
+  padding: var(--space-4);
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
 }
-.schedule-head div { margin: 2px 0; }
+.schedule-head::-webkit-details-marker { display: none; }
+.schedule-head-icon {
+  font-family: "Museo", var(--font-sans);
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 1;
+  flex-shrink: 0;
+  opacity: 0.55;
+}
+.schedule-head-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+.schedule-head-title { font-size: 18px; letter-spacing: 0.5px; }
+.schedule-head-date { font-weight: 400; font-size: 13px; letter-spacing: 0.3px; opacity: 0.85; }
+.schedule-chevron {
+  font-size: 22px;
+  line-height: 1;
+  transition: transform 0.25s ease;
+  flex-shrink: 0;
+}
+.schedule-day[open] .schedule-chevron { transform: rotate(180deg); }
+
+.schedule-body {
+  display: flex;
+  flex-direction: column;
+}
 .schedule-row {
   display: flex;
-  background: var(--surface-raised);
-  border-radius: var(--radius-none);
-  margin-top: var(--space-1);
+  padding: 2px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  transition: background 0.2s ease;
+}
+.schedule-row:hover {
+  background: rgba(255, 255, 255, 0.06);
 }
 .schedule-time {
   width: 90px;
