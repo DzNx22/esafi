@@ -61,13 +61,14 @@ img { max-width: 100%; display: block; }
 .pinwheel { margin-left: -18px; margin-bottom: 0.05em; }
 .hero-title-word {
   font-family: "Museo", var(--font-sans);
-  font-size: 66px;
+  font-size: 80px;
   line-height: 0.86;
   font-weight: 300;
   color: var(--gold);
   text-transform: uppercase;
   display: block;
 }
+.hero-title-word--small { font-size: 66px; }
 .hero-title-sub {
   font-family: "Museo", var(--font-sans);
   font-size: 34px;
