@@ -14,7 +14,7 @@
   --surface-raised: #284BA0;
   --gold: #FFC107;
   --ink: #FFFFFF;
-  --ink-on-gold: #122657;
+  --ink-on-gold: #12235C;
   --ink-on-surface-raised: #FFFFFF;
 
   --font-sans: "Poppins", system-ui, sans-serif;
@@ -146,6 +146,7 @@ img { max-width: 100%; display: block; }
 
 /* Buttons */
 .btn {
+  position: relative;
   display: inline-block;
   border: 0;
   cursor: pointer;
@@ -153,9 +154,36 @@ img { max-width: 100%; display: block; }
   border-radius: var(--radius-none);
   text-decoration: none;
   text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  will-change: transform;
 }
-.btn-primary { background: var(--gold); color: var(--ink-on-gold); }
-.btn-secondary { background: var(--surface-raised); color: var(--ink-on-surface-raised); }
+.btn-primary {
+  background: var(--gold);
+  color: var(--ink-on-gold);
+  box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.5);
+}
+.btn-primary:hover {
+  background: #ffd54a;
+  box-shadow: 0 8px 20px -6px rgba(255, 193, 7, 0.6);
+  transform: translateY(-2px);
+}
+.btn-primary:active {
+  transform: translateY(0) scale(0.97);
+  box-shadow: 0 4px 10px -4px rgba(255, 193, 7, 0.5);
+}
+.btn-secondary {
+  background: var(--surface-raised);
+  color: var(--ink-on-surface-raised);
+}
+.btn-secondary:hover {
+  background: #3a5cc0;
+  box-shadow: 0 8px 20px -8px rgba(40, 75, 160, 0.7);
+  transform: translateY(-2px);
+}
+.btn-secondary:active {
+  transform: translateY(0) scale(0.97);
+  box-shadow: 0 4px 10px -6px rgba(40, 75, 160, 0.6);
+}
 .btn-row {
   display: flex;
   gap: var(--space-3);
