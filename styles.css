@@ -60,7 +60,7 @@ img { max-width: 100%; display: block; }
 }
 .hero-title-word {
   font-family: "Museo", var(--font-sans);
-  font-size: 88px;
+  font-size: 80px;
   line-height: 0.86;
   font-weight: 300;
   color: var(--gold);
@@ -184,8 +184,8 @@ img { max-width: 100%; display: block; }
 }
 .hero-top {
   display: grid;
-  grid-template-columns: minmax(260px, 470px) 1fr;
-  gap: var(--space-6);
+  grid-template-columns: minmax(260px, 430px) 1fr;
+  gap: var(--space-5);
   min-height: 520px;
 }
 .hero-text { min-width: 0; }
@@ -195,7 +195,7 @@ img { max-width: 100%; display: block; }
   position: absolute;
   top: var(--space-8);
   right: 2%;
-  width: 45%;
+  width: 50%;
   height: auto;
   max-height: 520px;
   object-fit: contain;
