@@ -199,9 +199,16 @@ img { max-width: 100%; display: block; }
   gap: var(--space-6);
   flex-wrap: wrap;
 }
-.hero-text { max-width: 680px; }
+.hero-text { max-width: 620px; flex: 1 1 420px; }
 .hero-text .display-eyebrow { margin-bottom: var(--space-2); }
 .hero-text .display-hero { margin-bottom: var(--space-3); }
+.hero-speakers {
+  flex: 1 1 320px;
+  max-width: 420px;
+  width: 100%;
+  height: auto;
+  align-self: flex-end;
+}
 .pinwheel {
   width: 96px;
   height: auto;
