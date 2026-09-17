@@ -55,7 +55,7 @@ img { max-width: 100%; display: block; }
 .display-hero { margin: 0; display: block; }
 .hero-title-row {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   gap: var(--space-2);
 }
 .hero-title-word {
@@ -243,10 +243,9 @@ img { max-width: 100%; display: block; }
 .hero-meta-icon--gold { background: var(--gold); }
 .hero-meta-icon--blue { background: var(--surface-raised); }
 .pinwheel {
-  width: 170px;
+  width: 140px;
   height: auto;
   flex-shrink: 0;
-  margin-bottom: 0.35em;
 }
 
 .hero-desc {
