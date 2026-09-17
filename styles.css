@@ -517,7 +517,7 @@ section { padding: var(--space-7) 0; position: relative; overflow: hidden; }
 
 /* Programação */
 .schedule-list {
-  max-width: 760px;
+  max-width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -555,11 +555,26 @@ section { padding: var(--space-7) 0; position: relative; overflow: hidden; }
 .schedule-head-title { font-size: 18px; letter-spacing: 0.5px; }
 .schedule-head-date { font-weight: 400; font-size: 13px; letter-spacing: 0.3px; opacity: 0.85; }
 .schedule-chevron {
-  font-size: 22px;
-  line-height: 1;
-  transition: transform 0.4s cubic-bezier(0.65, 0, 0.35, 1);
   flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(4, 23, 68, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4s cubic-bezier(0.65, 0, 0.35, 1), background 0.25s ease;
 }
+.schedule-chevron svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.schedule-head:hover .schedule-chevron { background: rgba(4, 23, 68, 0.2); }
 .schedule-day.is-open .schedule-chevron { transform: rotate(180deg); }
 
 .schedule-body-wrap {
