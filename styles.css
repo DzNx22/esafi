@@ -74,7 +74,7 @@ img { max-width: 100%; display: block; }
   font-weight: 300;
   color: var(--ink);
   display: block;
-  margin-top: var(--space-2);
+  margin-top: -6px;
 }
 .display-eyebrow { font-family: "Museo", var(--font-sans); font-size: 20px; line-height: 26px; font-weight: 300; color: var(--ink); letter-spacing: 1px; text-transform: uppercase; margin: 0; }
 .heading-section { font-family: "Museo", var(--font-sans); font-size: 28px; line-height: 34px; font-weight: 300; color: var(--gold); margin: 0; }
@@ -184,20 +184,20 @@ img { max-width: 100%; display: block; }
 }
 .hero-top {
   display: grid;
-  grid-template-columns: minmax(280px, 560px) 1fr;
+  grid-template-columns: minmax(280px, 520px) 1fr;
   gap: var(--space-6);
-  min-height: 460px;
+  min-height: 520px;
 }
 .hero-text { min-width: 0; }
-.hero-text .display-eyebrow { margin-bottom: var(--space-2); }
+.hero-text .display-eyebrow { margin-top: var(--space-3); margin-bottom: var(--space-3); }
 .hero-text .display-hero { margin-bottom: var(--space-3); }
 .hero-speakers {
   position: absolute;
   top: var(--space-8);
-  right: 0;
-  width: 46%;
+  right: 4%;
+  width: 58%;
   height: auto;
-  max-height: 460px;
+  max-height: 520px;
   object-fit: contain;
   object-position: top center;
   z-index: 1;
