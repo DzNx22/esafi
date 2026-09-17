@@ -196,8 +196,9 @@ img { max-width: 100%; display: block; }
   top: var(--space-8);
   right: 0;
   width: 46%;
-  height: 460px;
-  object-fit: cover;
+  height: auto;
+  max-height: 460px;
+  object-fit: contain;
   object-position: top center;
   z-index: 1;
 }
