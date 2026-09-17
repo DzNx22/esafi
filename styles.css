@@ -240,16 +240,6 @@ img { max-width: 100%; display: block; }
   overflow: hidden;
   padding: var(--space-5) 0 var(--space-7);
 }
-.hero-shape-2 {
-  position: absolute;
-  width: 160px;
-  height: 160px;
-  background: var(--surface-raised);
-  clip-path: polygon(0 100%, 100% 100%, 0 0);
-  bottom: -40px;
-  left: -40px;
-  z-index: 0;
-}
 .hero .container {
   position: relative;
   z-index: 1;
