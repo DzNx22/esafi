@@ -84,7 +84,7 @@
           <p class="body-text">Servidores e servidoras públicos e técnicos da Administração Pública que atuam nas áreas de <span class="gold-text">Engenharia e Arquitetura, Licitações e Contratos, Planejamento, Obras Públicas, Fiscalização Contratual, Controle Interno, Assessoria Jurídica, Orçamento, Finanças</span> e demais atividades relacionadas às contratações de obras e serviços de engenharia.</p>
           <div class="btn-grid" id="inscricao">
             <a href="#" class="btn btn-primary label-nav">QUERO ME INSCREVER</a>
-            <a href="#" class="btn btn-secondary label-nav">QUERO MAIS INFORMAÇÕES</a>
+            <a href="#" class="btn btn-secondary label-nav js-open-info-modal">QUERO MAIS INFORMAÇÕES</a>
             <a href="#" class="btn btn-secondary label-nav">BAIXAR CARTA CONVITE</a>
             <a href="#programacao" class="btn btn-secondary label-nav">BAIXAR PROGRAMAÇÃO</a>
           </div>
@@ -352,6 +352,36 @@
     </div>
   </div>
 </footer>
+
+<div class="modal-overlay" id="info-modal-overlay" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="info-modal-title">
+    <button type="button" class="modal-close" id="info-modal-close" aria-label="Fechar">&times;</button>
+    <h3 id="info-modal-title" class="heading-section" style="font-size:22px;">Quero mais informações</h3>
+    <p class="body-text modal-desc">Preencha seus dados e nossa equipe entrará em contato com todos os detalhes da Semana Nacional de Obras Públicas.</p>
+    <form id="info-modal-form" novalidate>
+      <div class="form-field">
+        <label for="info-name" class="label-badge">Nome</label>
+        <input type="text" id="info-name" name="name" required autocomplete="name" placeholder="Seu nome completo">
+        <span class="form-error" data-error-for="info-name"></span>
+      </div>
+      <div class="form-field">
+        <label for="info-phone" class="label-badge">Telefone</label>
+        <input type="tel" id="info-phone" name="phone" required inputmode="numeric" autocomplete="tel" placeholder="(00) 00000-0000" maxlength="15">
+        <span class="form-error" data-error-for="info-phone"></span>
+      </div>
+      <div class="form-field">
+        <label for="info-email" class="label-badge">E-mail</label>
+        <input type="email" id="info-email" name="email" required autocomplete="email" placeholder="seu@email.com">
+        <span class="form-error" data-error-for="info-email"></span>
+      </div>
+      <div class="modal-success" id="info-modal-success" hidden>Recebemos seus dados! Em breve entraremos em contato.</div>
+      <div class="btn-row modal-actions">
+        <button type="submit" class="btn btn-primary label-nav">ENVIAR</button>
+        <button type="button" class="btn btn-secondary label-nav" id="info-modal-cancel">CANCELAR</button>
+      </div>
+    </form>
+  </div>
+</div>
 
 <script src="script.js"></script>
 </body>

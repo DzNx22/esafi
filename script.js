@@ -53,6 +53,107 @@ document.addEventListener('DOMContentLoaded', () => {
     revealEls.forEach((el) => el.classList.add('is-visible'));
   }
 
+  const infoModal = document.getElementById('info-modal-overlay');
+  if (infoModal) {
+    const modal = infoModal.querySelector('.modal');
+    const form = document.getElementById('info-modal-form');
+    const nameInput = document.getElementById('info-name');
+    const phoneInput = document.getElementById('info-phone');
+    const emailInput = document.getElementById('info-email');
+    const successBox = document.getElementById('info-modal-success');
+    const closeBtn = document.getElementById('info-modal-close');
+    const cancelBtn = document.getElementById('info-modal-cancel');
+    let lastFocused = null;
+
+    const setError = (input, message) => {
+      const errorEl = infoModal.querySelector(`[data-error-for="${input.id}"]`);
+      input.classList.toggle('is-invalid', Boolean(message));
+      if (errorEl) errorEl.textContent = message || '';
+    };
+
+    const openModal = () => {
+      lastFocused = document.activeElement;
+      infoModal.hidden = false;
+      requestAnimationFrame(() => infoModal.classList.add('is-visible'));
+      document.body.style.overflow = 'hidden';
+      setTimeout(() => nameInput.focus(), 50);
+    };
+
+    const closeModal = () => {
+      infoModal.classList.remove('is-visible');
+      document.body.style.overflow = '';
+      setTimeout(() => {
+        infoModal.hidden = true;
+        form.reset();
+        form.hidden = false;
+        successBox.hidden = true;
+        [nameInput, phoneInput, emailInput].forEach((input) => setError(input, ''));
+        if (lastFocused) lastFocused.focus();
+      }, 250);
+    };
+
+    document.querySelectorAll('.js-open-info-modal').forEach((trigger) => {
+      trigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        openModal();
+      });
+    });
+
+    closeBtn.addEventListener('click', closeModal);
+    cancelBtn.addEventListener('click', closeModal);
+    infoModal.addEventListener('click', (e) => {
+      if (e.target === infoModal) closeModal();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !infoModal.hidden) closeModal();
+    });
+
+    phoneInput.addEventListener('input', () => {
+      let digits = phoneInput.value.replace(/\D/g, '').slice(0, 11);
+      let formatted = digits;
+      if (digits.length > 0) formatted = '(' + digits.slice(0, 2);
+      if (digits.length >= 3) formatted += ') ' + digits.slice(2, 7);
+      if (digits.length >= 8) formatted += '-' + digits.slice(7, 11);
+      phoneInput.value = formatted;
+      setError(phoneInput, '');
+    });
+
+    const isValidEmail = (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+    const isValidPhone = (value) => /^\(\d{2}\) \d{5}-\d{4}$/.test(value);
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      let valid = true;
+
+      if (!nameInput.value.trim()) {
+        setError(nameInput, 'Informe seu nome.');
+        valid = false;
+      } else {
+        setError(nameInput, '');
+      }
+
+      if (!isValidPhone(phoneInput.value)) {
+        setError(phoneInput, 'Telefone inválido. Use o formato (00) 00000-0000.');
+        valid = false;
+      } else {
+        setError(phoneInput, '');
+      }
+
+      if (!isValidEmail(emailInput.value.trim())) {
+        setError(emailInput, 'Informe um e-mail válido.');
+        valid = false;
+      } else {
+        setError(emailInput, '');
+      }
+
+      if (!valid) return;
+
+      form.hidden = true;
+      successBox.hidden = false;
+      setTimeout(closeModal, 2200);
+    });
+  }
+
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener('click', (e) => {
       const targetId = anchor.getAttribute('href');
