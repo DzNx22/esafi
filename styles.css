@@ -365,9 +365,6 @@ img { max-width: 100%; display: block; }
 }
 
 section { padding: var(--space-7) 0; position: relative; }
-section + section {
-  border-top: 1px solid rgba(255, 193, 7, 0.16);
-}
 #palestrantes { padding-top: var(--space-5); }
 #apresentacao { padding-top: var(--space-2); }
 #palestrantes .section-heading { margin-bottom: var(--space-5); }
