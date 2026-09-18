@@ -731,7 +731,7 @@ section { padding: var(--space-7) 0; position: relative; }
   .btn-grid { grid-template-columns: 1fr; max-width: 100%; }
   .speaker-grid { grid-template-columns: 1fr; }
   .hero-title-word { font-size: 44px; }
-  .hero-title-sub { font-size: 20px; margin-top: 4px; }
+  .hero-title-sub { font-size: 20px; margin-top: 2px; }
   .pinwheel { width: 90px; height: auto; }
   .hero-photos img { height: 120px; }
   .hero-video { aspect-ratio: 16 / 9; height: auto; }
