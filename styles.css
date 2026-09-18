@@ -403,7 +403,8 @@ section { padding: var(--space-7) 0; position: relative; }
   width: 100%;
   max-width: none;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center top;
   transform: translateX(-50%);
   z-index: 0;
 }
@@ -414,19 +415,6 @@ section { padding: var(--space-7) 0; position: relative; }
   background: linear-gradient(to bottom, transparent 45%, rgba(4, 23, 68, 0.95) 100%);
   z-index: 1;
 }
-.speaker-photo::before {
-  content: "";
-  position: absolute;
-  top: var(--space-3);
-  right: var(--space-3);
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  z-index: 2;
-  border: 2px solid var(--ink);
-}
-.speaker-card--gold .speaker-photo::before { background: var(--gold); border-color: var(--gold); }
-.speaker-card--blue .speaker-photo::before { background: var(--surface); }
 .speaker-photo .heading-card {
   position: relative;
   z-index: 2;
