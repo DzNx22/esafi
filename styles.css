@@ -993,14 +993,6 @@ section { padding: var(--space-7) 0; position: relative; }
   transform: scale(1.08);
   z-index: 1;
 }
-.pricing-card--featured::before {
-  content: "";
-  position: absolute;
-  inset: -30px;
-  background: radial-gradient(circle at 50% 30%, rgba(255, 193, 7, 0.45), rgba(255, 193, 7, 0.12) 45%, rgba(255, 193, 7, 0) 72%);
-  z-index: -1;
-  pointer-events: none;
-}
 .pricing-tag {
   align-self: flex-start;
   background: rgba(255, 255, 255, 0.12);
