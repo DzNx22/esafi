@@ -84,7 +84,7 @@ img { max-width: 100%; display: block; }
 .hero-title-word--small { font-size: 66px; }
 .hero-title-sub {
   font-family: "Museo", var(--font-sans);
-  font-size: 29px;
+  font-size: 27px;
   line-height: 1.2;
   font-weight: 300;
   color: var(--ink);
