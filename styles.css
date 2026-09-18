@@ -396,7 +396,7 @@ section { padding: var(--space-7) 0; position: relative; }
 }
 .speaker-card:hover {
   transform: translateY(-6px);
-  filter: drop-shadow(0 0 22px rgba(255, 193, 7, 0.4));
+  filter: drop-shadow(0 0 22px rgba(88, 140, 255, 0.45));
 }
 .speaker-photo {
   position: relative;
@@ -631,8 +631,8 @@ section { padding: var(--space-7) 0; position: relative; }
   transition: box-shadow 0.35s ease, border-color 0.35s ease;
 }
 .faq-item.is-open {
-  border-color: rgba(255, 193, 7, 0.5);
-  box-shadow: 0 20px 48px -10px rgba(4, 23, 68, 0.65), 0 0 28px -8px rgba(255, 193, 7, 0.3);
+  border-color: rgba(88, 140, 255, 0.55);
+  box-shadow: 0 20px 48px -10px rgba(4, 23, 68, 0.65), 0 0 28px -8px rgba(88, 140, 255, 0.35);
 }
 .faq-head {
   width: 100%;
@@ -652,7 +652,7 @@ section { padding: var(--space-7) 0; position: relative; }
 .faq-head-title { font-weight: 700; }
 .faq-item .schedule-chevron { background: rgba(255, 255, 255, 0.12); color: var(--ink); }
 .faq-head:hover .schedule-chevron { background: rgba(255, 255, 255, 0.22); }
-.faq-item.is-open .schedule-chevron { background: var(--gold); color: var(--ink-on-gold); }
+.faq-item.is-open .schedule-chevron { background: #588cff; color: var(--ink); }
 
 .faq-body-wrap {
   display: grid;
@@ -993,14 +993,12 @@ section { padding: var(--space-7) 0; position: relative; }
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 .pricing-card:hover {
-  border-color: rgba(255, 193, 7, 0.5);
-  box-shadow: 0 16px 40px -12px rgba(4, 23, 68, 0.55), 0 0 32px -6px rgba(255, 193, 7, 0.35);
+  border-color: rgba(88, 140, 255, 0.55);
+  box-shadow: 0 16px 40px -12px rgba(4, 23, 68, 0.55), 0 0 32px -6px rgba(88, 140, 255, 0.4);
 }
 .pricing-card--featured {
   background: #1c3a8c;
   box-shadow: 0 24px 56px -14px rgba(4, 23, 68, 0.7);
-  padding: var(--space-6) var(--space-5);
-  transform: scale(1.08);
   z-index: 1;
 }
 .pricing-tag {
@@ -1096,5 +1094,5 @@ section { padding: var(--space-7) 0; position: relative; }
 
 @media (max-width: 900px) {
   .pricing-grid { grid-template-columns: 1fr; }
-  .pricing-card--featured { transform: none; order: -1; }
+  .pricing-card--featured { order: -1; }
 }
