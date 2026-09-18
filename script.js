@@ -236,9 +236,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (!valid) return;
 
-      form.hidden = true;
-      successBox.hidden = false;
-      setTimeout(closeModal, 2200);
+      window.location.href = 'obrigado.html';
     });
   }
 

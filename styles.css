@@ -831,6 +831,38 @@ section { padding: var(--space-7) 0; position: relative; }
   font-size: 14px;
 }
 
+/* Obrigado page */
+.thanks-section {
+  min-height: calc(100vh - 140px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-8) 0;
+}
+.thanks-content {
+  max-width: 560px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.thanks-check {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: var(--gold);
+  color: var(--ink-on-gold);
+  font-size: 32px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-5);
+}
+.thanks-title { font-size: 34px; line-height: 40px; margin-bottom: var(--space-4); }
+.thanks-text { color: rgba(255, 255, 255, 0.85); margin-bottom: var(--space-6); }
+.thanks-cta { justify-content: center; }
+
 /* UX additions: required marks, scroll-to-top */
 .required-mark {
   color: var(--gold);
