@@ -269,7 +269,7 @@ img { max-width: 100%; display: block; }
 .hero-speakers {
   position: absolute;
   top: var(--space-5);
-  right: 5%;
+  right: 13%;
   width: 48%;
   height: auto;
   max-height: 520px;
