@@ -236,6 +236,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (!valid) return;
 
+      const acData = new FormData();
+      acData.append('u', '1');
+      acData.append('f', '1');
+      acData.append('s', '');
+      acData.append('c', '0');
+      acData.append('m', '0');
+      acData.append('act', 'sub');
+      acData.append('v', '2');
+      acData.append('or', '702e5f6d-c13e-4b86-a4d0-b5f8e037017a');
+      acData.append('fullname', nameInput.value.trim());
+      acData.append('phone', '+55' + phoneInput.value.replace(/\D/g, ''));
+      acData.append('email', emailInput.value.trim());
+
+      fetch('https://esafi.activehosted.com/proc.php', {
+        method: 'POST',
+        mode: 'no-cors',
+        keepalive: true,
+        body: acData,
+      }).catch(() => {});
+
       window.location.href = 'obrigado.html';
     });
   }
