@@ -952,8 +952,8 @@ section { padding: var(--space-7) 0; position: relative; }
   gap: 2px;
 }
 .countdown-value {
-  font-family: "Museo", var(--font-sans);
-  font-weight: 300;
+  font-family: var(--font-sans);
+  font-weight: 700;
   font-size: 18px;
   color: var(--ink);
   min-width: 20px;
