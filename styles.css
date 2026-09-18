@@ -128,7 +128,7 @@ img { max-width: 100%; display: block; }
 .main-nav ul {
   list-style: none;
   display: flex;
-  gap: var(--space-5);
+  gap: var(--space-4);
   margin: 0;
   padding: 0;
 }
@@ -138,8 +138,9 @@ img { max-width: 100%; display: block; }
   padding: 6px 2px;
   color: var(--ink);
   text-decoration: none;
+  font-size: 13px;
   font-weight: 500;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.2px;
   transition: color 0.3s ease;
 }
 .main-nav a::after {
