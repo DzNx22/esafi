@@ -96,7 +96,7 @@ img { max-width: 100%; display: block; }
 .heading-card { font-size: 22px; line-height: 26px; font-weight: 700; color: var(--ink); margin: 0; }
 .label-nav { font-size: 14px; line-height: 20px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; }
 .label-badge { font-size: 15px; line-height: 20px; font-weight: 700; }
-.body-text { font-size: 16px; line-height: 26px; font-weight: 400; color: var(--ink); }
+.body-text { font-size: 16px; line-height: 26px; font-weight: 400; color: var(--ink); text-align: justify; }
 .body-text--lead { font-size: 19px; line-height: 30px; font-weight: 300; }
 .gold-text { color: var(--gold); }
 
