@@ -189,6 +189,7 @@ img { max-width: 100%; display: block; }
 .btn-primary {
   background: var(--gold);
   color: var(--ink-on-gold);
+  font-weight: 800;
   box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.5);
 }
 .btn-primary:hover {
@@ -1001,15 +1002,11 @@ section { padding: var(--space-7) 0; position: relative; }
   color: var(--ink-on-gold);
 }
 .pricing-box {
-  background: var(--surface-header);
-  padding: var(--space-4);
+  padding: var(--space-2) 0 var(--space-4);
   text-align: center;
   display: flex;
   flex-direction: column;
   gap: 4px;
-}
-.pricing-box--featured {
-  background: linear-gradient(135deg, var(--surface-header), var(--surface-raised));
 }
 .pricing-box-label {
   font-size: 13px;

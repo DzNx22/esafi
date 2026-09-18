@@ -90,22 +90,16 @@ document.addEventListener('DOMContentLoaded', () => {
       requestAnimationFrame(() => bioModal.classList.add('is-visible'));
     };
 
-    const closeBioModal = () => {
-      bioModal.classList.remove('is-visible');
-      hideTimer = setTimeout(() => {
-        bioModal.hidden = true;
-      }, 250);
-    };
-
     document.querySelectorAll('.speaker-card[data-speaker-name]').forEach((card) => {
-      card.addEventListener('mouseenter', () => openBioModal(card));
-      card.addEventListener('mouseleave', () => closeBioModal());
-      card.addEventListener('focus', () => openBioModal(card));
-      card.addEventListener('blur', () => closeBioModal());
+      card.addEventListener('click', () => openBioModal(card));
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openBioModal(card);
+        }
+      });
     });
 
-    bioModal.addEventListener('mouseenter', () => clearTimeout(hideTimer));
-    bioModal.addEventListener('mouseleave', () => closeBioModal());
     bioClose.addEventListener('click', () => {
       clearTimeout(hideTimer);
       bioModal.classList.remove('is-visible');
