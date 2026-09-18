@@ -406,9 +406,11 @@ section { padding: var(--space-7) 0; position: relative; }
   z-index: 0;
 }
 .speaker-photo img[alt="André Baeta"] {
+  top: auto;
+  bottom: 0;
   width: 88%;
   height: 88%;
-  transform: translateX(-50%) translateY(4%);
+  transform: translateX(-50%);
 }
 .speaker-photo::after {
   content: "";
