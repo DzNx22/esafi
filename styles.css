@@ -91,7 +91,7 @@ img { max-width: 100%; display: block; }
   display: block;
   margin-top: 4px;
 }
-.display-eyebrow { font-family: "Museo", var(--font-sans); font-size: 20px; line-height: 26px; font-weight: 300; color: var(--ink); letter-spacing: 1px; text-transform: uppercase; margin: 0; }
+.display-eyebrow { font-family: "Museo", var(--font-sans); font-size: 17px; line-height: 26px; font-weight: 300; color: var(--ink); letter-spacing: 1px; text-transform: uppercase; margin: 0; }
 .heading-section { font-family: "Museo", var(--font-sans); font-size: 28px; line-height: 34px; font-weight: 300; color: var(--gold); margin: 0; }
 .heading-card { font-size: 22px; line-height: 26px; font-weight: 700; color: var(--ink); margin: 0; }
 .label-nav { font-size: 14px; line-height: 20px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; }
