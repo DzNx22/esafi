@@ -39,6 +39,87 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  const countdownBar = document.getElementById('countdown-bar');
+  if (countdownBar) {
+    const eventDate = new Date('2026-11-04T07:30:00-03:00').getTime();
+    const daysEl = document.getElementById('cd-days');
+    const hoursEl = document.getElementById('cd-hours');
+    const minutesEl = document.getElementById('cd-minutes');
+    const secondsEl = document.getElementById('cd-seconds');
+    const pad = (n) => String(n).padStart(2, '0');
+
+    const tick = () => {
+      const diff = eventDate - Date.now();
+      if (diff <= 0) {
+        daysEl.textContent = '00';
+        hoursEl.textContent = '00';
+        minutesEl.textContent = '00';
+        secondsEl.textContent = '00';
+        return;
+      }
+      const days = Math.floor(diff / 86400000);
+      const hours = Math.floor((diff % 86400000) / 3600000);
+      const minutes = Math.floor((diff % 3600000) / 60000);
+      const seconds = Math.floor((diff % 60000) / 1000);
+      daysEl.textContent = pad(days);
+      hoursEl.textContent = pad(hours);
+      minutesEl.textContent = pad(minutes);
+      secondsEl.textContent = pad(seconds);
+    };
+
+    tick();
+    setInterval(tick, 1000);
+
+    window.addEventListener('scroll', () => {
+      countdownBar.classList.toggle('is-visible', window.scrollY > 200);
+    }, { passive: true });
+  }
+
+  const bioModal = document.getElementById('bio-modal-overlay');
+  if (bioModal) {
+    const bioName = document.getElementById('bio-modal-name');
+    const bioText = document.getElementById('bio-modal-text');
+    const bioClose = document.getElementById('bio-modal-close');
+    let hideTimer = null;
+
+    const openBioModal = (card) => {
+      clearTimeout(hideTimer);
+      bioName.textContent = card.dataset.speakerName || '';
+      bioText.textContent = card.dataset.speakerBio || '';
+      bioModal.hidden = false;
+      requestAnimationFrame(() => bioModal.classList.add('is-visible'));
+    };
+
+    const closeBioModal = () => {
+      bioModal.classList.remove('is-visible');
+      hideTimer = setTimeout(() => {
+        bioModal.hidden = true;
+      }, 250);
+    };
+
+    document.querySelectorAll('.speaker-card[data-speaker-name]').forEach((card) => {
+      card.addEventListener('mouseenter', () => openBioModal(card));
+      card.addEventListener('mouseleave', () => closeBioModal());
+      card.addEventListener('focus', () => openBioModal(card));
+      card.addEventListener('blur', () => closeBioModal());
+    });
+
+    bioModal.addEventListener('mouseenter', () => clearTimeout(hideTimer));
+    bioModal.addEventListener('mouseleave', () => closeBioModal());
+    bioClose.addEventListener('click', () => {
+      clearTimeout(hideTimer);
+      bioModal.classList.remove('is-visible');
+      bioModal.hidden = true;
+    });
+    bioModal.addEventListener('click', (e) => {
+      if (e.target === bioModal) {
+        clearTimeout(hideTimer);
+        bioModal.classList.remove('is-visible');
+        bioModal.hidden = true;
+      }
+    });
+  }
+
   document.querySelectorAll('[data-accordion]').forEach((item) => {
     const trigger = item.querySelector('.schedule-head, .faq-head');
     if (!trigger) return;
