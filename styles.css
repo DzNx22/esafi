@@ -359,7 +359,7 @@ section { padding: var(--space-7) 0; position: relative; }
 .two-col {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--space-5);
+  gap: var(--space-8);
 }
 .two-col .body-text { margin-bottom: var(--space-4); }
 .two-col .btn-row, .two-col .btn-grid { margin-top: var(--space-4); }
