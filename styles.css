@@ -102,7 +102,7 @@ img { max-width: 100%; display: block; }
 
 /* Header */
 .site-header {
-  background: linear-gradient(180deg, #020b2c, var(--surface-header));
+  background: linear-gradient(180deg, var(--surface-header), #020b2c);
   position: sticky;
   top: 0;
   z-index: 100;
