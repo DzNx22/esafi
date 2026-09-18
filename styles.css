@@ -8,6 +8,14 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("assets/fonts/ProximaNova-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --surface: #12235C;
   --surface-header: #041744;
@@ -17,7 +25,7 @@
   --ink-on-gold: #12235C;
   --ink-on-surface-raised: #FFFFFF;
 
-  --font-sans: "Poppins", system-ui, sans-serif;
+  --font-sans: "Proxima Nova", "Poppins", system-ui, sans-serif;
 
   --space-1: 4px;
   --space-2: 8px;
