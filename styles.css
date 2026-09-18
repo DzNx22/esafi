@@ -48,12 +48,9 @@ body {
   margin: 0;
   font-family: var(--font-sans);
   background:
-    linear-gradient(rgba(88, 140, 255, 0.055) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(88, 140, 255, 0.055) 1px, transparent 1px),
-    radial-gradient(circle at 15% 8%, rgba(88, 140, 255, 0.16), transparent 40%),
-    radial-gradient(circle at 85% 65%, rgba(255, 193, 7, 0.08), transparent 45%),
+    linear-gradient(to right, var(--surface-header) 0%, transparent 6%, transparent 94%, var(--surface-header) 100%),
+    linear-gradient(to bottom, var(--surface-header) 0%, transparent 6%, transparent 94%, var(--surface-header) 100%),
     var(--surface);
-  background-size: 42px 42px, 42px 42px, auto, auto, auto;
   color: var(--ink);
 }
 
